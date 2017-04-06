@@ -1,0 +1,50 @@
+{
+  "name": "Memories",
+  "description": "Modular web template for interactive slideshows",
+  "author": "Phillip Prescher",
+  "private": true,
+  "scripts": {
+    "dev": "webpack-dev-server --inline --hot --no-info",
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
+  },
+  "dependencies": {
+    "eq.js": "^1.9.0",
+    "mdl-ext": "^0.9.12",
+    "polyline": "^0.2.0",
+    "vue": "^1.0.24",
+    "vue-mdl": "^0.8.3",
+    "vue-router": "0.7.11",
+    "vue-transfer-dom": "^1.1.0",
+    "vuex": "0.6.2",
+    "vuex-router-sync": "^1.0.0"
+  },
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-core": "^6.0.0",
+    "babel-loader": "^6.0.0",
+    "babel-plugin-transform-runtime": "^6.0.0",
+    "babel-preset-es2015": "^6.0.0",
+    "babel-preset-stage-2": "^6.0.0",
+    "babel-runtime": "^6.9.2",
+    "cross-env": "^1.0.6",
+    "css-loader": "^0.23.0",
+    "file-loader": "^0.8.5",
+    "fs": "0.0.2",
+    "gulp": "^3.9.1",
+    "gulp-run": "^1.7.1",
+    "gulp-s3": "^0.3.0",
+    "image-webpack-loader": "^1.6.3",
+    "json-loader": "^0.5.4",
+    "lodash": "^3.10.1",
+    "material-design-lite": "^1.1.3",
+    "q": "^1.4.1",
+    "time_ago_in_words": "^1.2.1",
+    "url-loader": "^0.5.7",
+    "vue-hot-reload-api": "^1.2.0",
+    "vue-html-loader": "^1.0.0",
+    "vue-loader": "^8.2.1",
+    "vue-style-loader": "^1.0.0",
+    "webpack": "^1.12.2",
+    "webpack-dev-server": "^1.12.0"
+  }
+}
