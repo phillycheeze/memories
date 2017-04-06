@@ -1,9 +1,10 @@
 var webpack = require('webpack')
+const path = require('path');
 
 module.exports = {
   entry: './src/main.js',
   output: {
-    path: './assets/js',
+    path: path.resolve(__dirname, 'assets/js'),
     publicPath: '/assets/js',
     filename: 'build.js'
   },
@@ -20,7 +21,7 @@ module.exports = {
         // excluding some local linked packages.
         // for normal use cases only node_modules is needed.
         exclude: /node_modules|vue\/dist|vue-router\/|vue-loader\/|vue-hot-reload-api\//,
-        loader: 'babel'
+        loader: 'babel-loader'
       },
       {
         test: /\.(png|jpg|gif|svg)$/,
@@ -32,14 +33,20 @@ module.exports = {
       }
     ]
   },
-  babel: {
-    presets: ['es2015'],
-    plugins: ['transform-runtime']
-  },
-  devServer: {
-    port: 3000,
-    historyApiFallback: true
-  }
+  plugins: [
+    new webpack.LoaderOptionsPlugin({
+      options: {
+        babel: {
+          presets: ['es2015'],
+          plugins: ['transform-runtime']
+        },
+        devServer: {
+          port: 3000,
+          historyApiFallback: true
+        }
+      }
+    })
+  ]
 }
 
 if (process.env.NODE_ENV === 'production') {
